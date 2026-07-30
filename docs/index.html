@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>tinkerscope exports</title>
+<link rel="icon" href="./viewer/favicon.svg" />
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfbfa; --fg: #1c1b1a; --dim: #6b6a66; --line: #e2e0dc;
+    --card: #fff; --accent: #8a5a2b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16151a; --fg: #e8e6e3; --dim: #9a978f; --line: #2c2a32; --card: #1e1d24; --accent: #d9a066; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 3rem 1.25rem 5rem; background: var(--bg); color: var(--fg);
+         font: 15px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .lede { color: var(--dim); margin: 0 0 2.5rem; }
+  a { color: var(--accent); }
+  h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em;
+       color: var(--dim); font-weight: 600; margin: 2.5rem 0 .85rem; }
+  .card { display: block; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.15rem;
+          background: var(--card); text-decoration: none; color: inherit; margin-bottom: .7rem;
+          transition: border-color .12s, transform .12s; }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h3 { margin: 0 0 .3rem; font-size: 1.02rem; color: var(--accent); }
+  .card p { margin: 0; color: var(--dim); font-size: .9rem; }
+  .meta { margin-top: .5rem; font-size: .78rem; color: var(--dim);
+          font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86em;
+         background: color-mix(in srgb, var(--fg) 8%, transparent); padding: .12em .38em; border-radius: 4px; }
+  pre { border: 1px solid var(--line); background: var(--card); border-radius: 8px;
+        padding: .85rem 1rem; overflow-x: auto; font-size: .82rem; }
+  pre code { background: none; padding: 0; }
+  ul { padding-left: 1.15rem; color: var(--dim); }
+  li { margin: .35rem 0; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>tinkerscope exports</h1>
+  <p class="lede">
+    A hosted read-only <a href="https://github.com/Butanium/tinkerscope">tinkerscope</a>,
+    plus the share packs it can open. Browse conversations, branch trees, per-token
+    probabilities and raw request metadata — no API key, no install, nothing to run.
+  </p>
+
+  <h2>Open a pack in the viewer</h2>
+  <a class="card" href="./viewer/?w=https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz">
+    <h3>value guarding v2</h3>
+    <p>Value-guarding probes across the weird-personas checkpoints. 818 nodes, 766 of
+       them carrying per-token logprobs — so the token inspector and the chart's
+       <em>first token</em> mode both work.</p>
+    <div class="meta">installs into your browser · with logprobs</div>
+  </a>
+  <a class="card" href="./viewer/?w=https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml">
+    <h3>CoT prefilling</h3>
+    <p>CoT-prefilling probes on 4 base models — Inkling, Nemotron-3-Ultra,
+       DeepSeek-V3.1, Kimi-K2.6. A 4-panel comparison, 62 nodes across 13 branch
+       points, with the raw request/response view.</p>
+    <div class="meta">installs into your browser · no logprobs</div>
+  </a>
+  <a class="card" href="./viewer/">
+    <h3>Just the viewer</h3>
+    <p>Opens on a baked copy of the CoT-prefilling workspace. Use the <b>⤒</b> button
+       beside the workspace picker — or drop a file on the page — to open a pack from
+       your own computer.</p>
+    <div class="meta">read-only</div>
+  </a>
+
+  <h2>How this works</h2>
+  <ul>
+    <li>The viewer is a static site: no backend, no key, nothing collected.</li>
+    <li>A pack link installs into <em>your</em> browser (IndexedDB) and stays there.
+        Nothing you open is uploaded anywhere.</li>
+    <li>Any tinkerscope pack works, not just these — point the viewer at your own with
+        <code>./viewer/?w=&lt;your pack url&gt;</code>, or open the file from disk.</li>
+    <li>Sampling is off: a static site has no backend and no key. To sample the models,
+        run tinkerscope locally against the same pack.</li>
+  </ul>
+
+  <h2>Run one locally instead</h2>
+  <pre><code>mkdir cot-prefilling &amp;&amp; cd cot-prefilling &amp;&amp; \
+  uvx --from git+https://github.com/Butanium/tinkerscope tinkerscope \
+  --pack https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml</code></pre>
+  <p style="color:var(--dim)">
+    Viewing needs nothing. Sampling needs a <code>TINKER_API_KEY</code>; the Inkling
+    base model additionally needs the cookbook <code>[inkling]</code> extra.
+  </p>
+
+  <footer>
+    Built with <a href="https://github.com/Butanium/tinkerscope">tinkerscope</a>
+    · <code>tinkerscope site export</code> · <code>tinkerscope pack export</code>
+  </footer>
+</main>
+</body>
+</html>
