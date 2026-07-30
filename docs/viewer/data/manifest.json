@@ -1,1 +1,13 @@
-{"version":1,"site":"tinkerscope","title":"tinkerscope","description":"Read-only tinkerscope. Open any share pack with ?w=<url>, or the picker.","data":"data/","default_workspace":"373f662b-6a6e-4809-9aa3-d15e1b63469c","pack_url":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml"}
+{
+  "version": 1,
+  "site": "tinkerscope",
+  "title": "tinkerscope",
+  "description": "Read-only tinkerscope. Open any share pack with ?w=<url>, or the picker.",
+  "data": "data/",
+  "default_workspace": "373f662b-6a6e-4809-9aa3-d15e1b63469c",
+  "pack_url": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml",
+  "pack_links": {
+    "pack-value-guarding-v2-value-guarding-v2": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz",
+    "pack-weird-personas-CoT-prefilling": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml"
+  }
+}
