@@ -27,12 +27,12 @@ off: a static site has no backend and no key.
 
 ## Run one locally instead
 
-Installs tinkerscope from source with [`uv`](https://docs.astral.sh/uv/), makes a
-workdir, and serves seeded from the pack (the workdir is the scan root, so state
-persists there):
+Installs [tinkerscope from PyPI](https://pypi.org/project/tinkerscope/) with
+[`uv`](https://docs.astral.sh/uv/), makes a workdir, and serves seeded from the pack
+(the workdir is the scan root, so state persists there):
 
 ```bash
-mkdir cot-prefilling && cd cot-prefilling && uvx --from git+https://github.com/Butanium/tinkerscope tinkerscope --pack https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml
+mkdir cot-prefilling && cd cot-prefilling && uvx tinkerscope --pack https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml
 ```
 
 It prints a local URL (e.g. `http://127.0.0.1:8765`) — open it and pick the workspace.
@@ -42,8 +42,8 @@ It prints a local URL (e.g. `http://127.0.0.1:8765`) — open it and pick the wo
 - **Viewing** a pack (messages, branch trees, the Raw view, token probabilities where
   the pack carries them) needs nothing — no API key, no GPU.
 - **Sampling** the models yourself needs a `TINKER_API_KEY` in the environment. The
-  Inkling base model additionally needs tinkerscope installed with the cookbook
-  `[inkling]` extra.
+  cookbook's `[inkling]` extra — what makes the Inkling base model render correctly —
+  is a hard dependency of tinkerscope, so any install already has it.
 - `--pack` takes a local path or a URL, gzipped or not.
 
 ## What's in this repo
