@@ -87,11 +87,12 @@
 
   <h2>Run one locally instead</h2>
   <pre><code>mkdir cot-prefilling &amp;&amp; cd cot-prefilling &amp;&amp; \
-  uvx --from git+https://github.com/Butanium/tinkerscope tinkerscope \
+  uvx tinkerscope \
   --pack https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml</code></pre>
   <p style="color:var(--dim)">
-    Viewing needs nothing. Sampling needs a <code>TINKER_API_KEY</code>; the Inkling
-    base model additionally needs the cookbook <code>[inkling]</code> extra.
+    Viewing needs nothing. Sampling needs a <code>TINKER_API_KEY</code>; the cookbook
+    <code>[inkling]</code> extra the Inkling base model needs is a hard dependency, so
+    any install already has it.
   </p>
 
   <footer>
