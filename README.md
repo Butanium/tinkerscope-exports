@@ -12,6 +12,7 @@ so you can reproduce a setup with no local training runs.
 | Pack | Direct link | What's in it |
 |---|---|---|
 | `value-guarding-v2.yaml.gz` | [open](https://butanium.github.io/tinkerscope-exports/viewer/?w=https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz) | Value-guarding probes across the weird-personas checkpoints. 818 nodes, 766 with **per-token logprobs** — so the token inspector and the chart's *first token* mode work. 18 MB gzipped. |
+| `fig1-smoking.yaml.gz` | [open](https://butanium.github.io/tinkerscope-exports/viewer/?w=https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/fig1-smoking.yaml.gz) | The smoking half of Fig. 1 from the CoT-unfaithfulness write-up, as a live workspace: both untrained bases beside every training recipe (cigarette-only · health×cigarette pair · crossed pair · filtered on-policy). 11 panels, 99 nodes / 33 branch points, multi-turn; **all 66 assistant nodes carry per-token logprobs** and raw request/response. 1.1 MB gzipped. |
 | `cot-prefilling.yaml` | [open](https://butanium.github.io/tinkerscope-exports/viewer/?w=https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml) | CoT-prefilling probes on 4 base models (Inkling · Nemotron-3-Ultra · DeepSeek-V3.1 · Kimi-K2.6). 4-panel workspace, 62 nodes / 13 branch points, with the raw request/response view. No logprobs. |
 
 The viewer reads **any** tinkerscope pack, not only the ones here:
