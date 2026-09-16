@@ -8,6 +8,7 @@
   "pack_url": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml",
   "pack_links": {
     "pack-value-guarding-v2-value-guarding-v2": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz",
-    "pack-weird-personas-CoT-prefilling": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml"
+    "pack-weird-personas-CoT-prefilling": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml",
+    "pack-movingcastles-zero-zero-probes": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/movingcastles-zero.yaml.gz"
   }
 }
