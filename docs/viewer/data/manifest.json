@@ -1,14 +1,1 @@
-{
-  "version": 1,
-  "site": "tinkerscope",
-  "title": "tinkerscope",
-  "description": "Read-only tinkerscope. Open any share pack with ?w=<url>, or the picker.",
-  "data": "data/",
-  "default_workspace": "373f662b-6a6e-4809-9aa3-d15e1b63469c",
-  "pack_url": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml",
-  "pack_links": {
-    "pack-value-guarding-v2-value-guarding-v2": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz",
-    "pack-weird-personas-CoT-prefilling": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml",
-    "pack-movingcastles-zero-zero-probes": "https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/movingcastles-zero.yaml.gz"
-  }
-}
+{"version":1,"site":"tinkerscope","title":"tinkerscope","description":"Read-only tinkerscope. Open any share pack with ?w=<url>, or the picker.","data":"data/","default_workspace":"pack-weird-personas-CoT-prefilling","pack_url":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml","pack_links":{"pack-weird-personas-CoT-prefilling":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/cot-prefilling.yaml","pack-value-guarding-v2-value-guarding-v2":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/value-guarding-v2.yaml.gz","pack-weird-personas-fig1-smoking-12-checkpoints":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/fig1-smoking.yaml.gz","pack-movingcastles-zero-zero-probes":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/movingcastles-zero.yaml.gz","pack-terra-for-dylan-Terra-p-4-memory-as-first-user-turn-p-1-as-recorded-p-2-memory-user-message":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/terra-refusal.yaml.gz","pack-terra-for-dylan-Terra-refusal-persists-after-memory-removal-for-Dylan":"https://raw.githubusercontent.com/Butanium/tinkerscope-exports/main/terra-refusal.yaml.gz"},"logprobs":"all"}
